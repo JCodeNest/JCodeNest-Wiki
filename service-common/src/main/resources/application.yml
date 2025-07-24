@@ -1,0 +1,44 @@
+# JCodeNest-Wiki 通用服务配置
+spring:
+  # Jackson配置
+  jackson:
+    # 日期格式
+    date-format: yyyy-MM-dd HH:mm:ss
+    # 时区
+    time-zone: Asia/Shanghai
+    # 序列化配置
+    serialization:
+      # 格式化输出
+      indent-output: false
+      # 忽略空值
+      write-null-map-values: false
+      # 忽略空集合
+      write-empty-json-arrays: false
+    # 反序列化配置
+    deserialization:
+      # 忽略未知属性
+      fail-on-unknown-properties: false
+      # 忽略空值
+      accept-empty-string-as-null-object: true
+    # 默认属性包含策略
+    default-property-inclusion: non_null
+
+# 日志配置
+logging:
+  level:
+    cn.jcodenest.wiki: DEBUG
+    org.springframework: INFO
+    com.alibaba: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+
+# 管理端点配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
