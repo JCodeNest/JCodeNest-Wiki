@@ -1,6 +1,6 @@
 package cn.jcodenest.wiki.common.annotation;
 
-import cn.jcodenest.wiki.common.enums.LogLevel;
+import cn.jcodenest.wiki.common.enums.LogLevelEnum;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -85,7 +85,7 @@ public @interface ApiLog {
      *
      * @return 日志级别
      */
-    LogLevel level() default LogLevel.INFO;
+    LogLevelEnum level() default LogLevelEnum.INFO;
 
     /**
      * 是否异步记录日志

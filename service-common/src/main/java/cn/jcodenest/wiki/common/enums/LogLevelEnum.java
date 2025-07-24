@@ -10,7 +10,7 @@ package cn.jcodenest.wiki.common.enums;
  * Copyright (c) 2025 JCodeNest-Wiki
  * All rights reserved.
  */
-public enum LogLevel {
+public enum LogLevelEnum {
     /**
      * 调试级别
      */
